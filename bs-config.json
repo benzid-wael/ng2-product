@@ -1,0 +1,9 @@
+{
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/api": "api"
+    },
+    "cors": true
+  }
+}
