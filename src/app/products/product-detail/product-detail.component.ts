@@ -6,11 +6,12 @@ import { Subscription } from 'rxjs/Subscription';
 import { IProduct } from '../product';
 import { ProductService } from '../product.service';
 
+
 @Component({
     templateUrl: 'product-detail.component.html'
 })
 export class ProductDetailComponent implements OnInit, OnDestroy {
-    pageTitle: string = 'Product Detail';
+    pageTitle = 'Product Detail';
     product: IProduct;
     errorMessage: string;
     private sub: Subscription;
@@ -23,7 +24,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         this.sub = this._route.params.subscribe(
             params => {
-                let id = +params['id'];
+                const id = +params['id'];
                 this.getProduct(id);
         });
     }
